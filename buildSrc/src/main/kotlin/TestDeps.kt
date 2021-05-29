@@ -1,21 +1,25 @@
 object TestDeps {
     object JUnit {
-        const val JUNIT = "junit:junit:_"
+        private const val VERSION = "4.12"
+        const val JUNIT = "junit:junit:$VERSION"
     }
 
     object Kotlinx {
-        const val COROUTINES_TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test:_"
+        private const val VERSION = SharedVersions.Kotlinx.COROUTINES
+        const val COROUTINES_TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$VERSION"
     }
 
     object AndroidX {
         object Arch {
-            const val CORE_TESTING = "androidx.arch.core:core-testing:_"
+            const val CORE_TESTING =
+                "androidx.arch.core:core-testing:${SharedVersions.AndroidX.Arch.CORE}"
         }
     }
 
     object CashApp {
         object Turbine {
-            const val TURBINE = "app.cash.turbine:turbine:_"
+            private const val VERSION = "0.5.0"
+            const val TURBINE = "app.cash.turbine:turbine:$VERSION"
         }
     }
 }
