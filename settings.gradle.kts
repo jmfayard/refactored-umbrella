@@ -1,3 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenLocal()
+    }
+}
+plugins {
+    // See https://jmfayard.github.io/refreshVersions
+    id("de.fayard.refreshVersions") version "0.10.1-SNAPSHOT"
+}
+
 rootProject.name = "RefactoredUmbrella"
 include(
     ":app",
